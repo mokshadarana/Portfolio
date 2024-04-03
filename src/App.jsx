@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import './App.css'
 
@@ -31,3 +32,17 @@ function App() {
 }
 
 export default App
+=======
+import React from 'react';
+import Login from './components/login/login';
+
+function App() {
+  return(
+  <div className='container'>
+    <Login/>
+  </div>
+  );
+}
+
+export default App;
+>>>>>>> 2ffa92b4a74140a598643f09e91c503666705656
