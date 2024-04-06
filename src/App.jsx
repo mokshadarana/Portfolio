@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-import './App.css'
+import React, { useState } from 'react'; // Assuming useState is required
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
+          {/* Assuming viteLogo and reactLogo are imported or defined elsewhere */}
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
@@ -28,21 +28,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
-}
-
-export default App
-=======
-import React from 'react';
-import Login from './components/login/login';
-
-function App() {
-  return(
-  <div className='container'>
-    <Login/>
-  </div>
   );
 }
 
 export default App;
->>>>>>> 2ffa92b4a74140a598643f09e91c503666705656
+
