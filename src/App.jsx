@@ -6,7 +6,7 @@ function App() {
   <div className='container'>
     <Login/>
   </div>
-  );
+  )
 }
 
 export default App;

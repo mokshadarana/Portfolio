@@ -17,13 +17,14 @@ function Homepage() {
             <li><a href="#">Our Story</a></li>
             <li><a href="#">Location</a></li>
             <li><a href="#">Tables</a></li>
+            <li><a href="#">Book a table</a></li>
           </ul>
         </nav>
       </header>
       <main>
         <section>
         <div className="picture">
-        <img src="src/food1.jpg" alt="Food" />
+        <img src="../src/assets/food1.jpg" alt="Food" />
         </div>
         </section>
         <section>
@@ -33,10 +34,11 @@ function Homepage() {
         <section>
           
           <div className="pictures3">
-          <img src="src/momo.jpg" alt="Food" />
-          <img src="src/Fruit.jpg" alt="Food" />
-          <img src="src/tuna.jpg" alt="Food" />
-          <img src="src/food4.jpg" alt="Food" />
+            <h3>Our Top Sales</h3>
+          <img src="../src/assets/momo.jpg" alt="Food" />
+          <img src="../src/assets/pasta.jpg" alt="Food" />
+          <img src="../src/assets/tuna.jpg" alt="Food" />
+          <img src="../src/assets/food4.jpg" alt="Food" />
           </div>
           
 
@@ -46,11 +48,14 @@ function Homepage() {
           <p >""Find OneBite Foods, where flavors unite, a culinary haven nestled just right."</p>
           <button>Our Location</button>
           <div className="picture2">
+          <img src="../src/assets/food3.jpg" alt="Food" />
         </div>
         </section>
       </main>
       <footer>
       <li><a href="#">Contact</a></li>
+      <p>Kathmandu,Nepal</p>
+      <p>Email: info@onebitefoods </p>
         <p style={{ fontFamily: 'Manrope', fontSize: '18px' }}>&copy; 2024 OneBite Foods. All rights reserved.</p>
       </footer>
     </div>
