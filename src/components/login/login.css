@@ -127,3 +127,9 @@ p {
   margin-bottom: 5px;
   text-align: center;
 }
+
+.error{
+  color: #561C24 ;
+  font-weight: bold;
+}
+

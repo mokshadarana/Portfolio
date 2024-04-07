@@ -78,7 +78,8 @@
     width: 280PX; 
   }
   
-  .email-label {
+  .email-label ,
+  .fullname-label{
     font-weight: bold;
     color: #561C24;
     margin-bottom: 5px;

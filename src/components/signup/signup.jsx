@@ -2,15 +2,27 @@ import React, { useState } from 'react';
 import './signup.css';
 
 function signup() {
+    const [fullName, setFullName] =useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [rePassword, setRePassword] =useState('');
+    const [error,setError] =useState('');
   
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
       e.preventDefault();
-      // Implement your login logic here, e.g., send username/password to backend for authentication
-      console.log('Signing up with:', username, password);
-      // You can redirect the user to another page upon successful login
+      if (password !== rePassword) {
+        setError('Passwords do not match');
+        return;
+    }
+
+      try {
+        const response = await axios.post('http://localhost:8081/signup', { fullName, email: email, password });
+        console.log('Signup Successful:', response.data);
+        // You can redirect the user to another page upon successful signup
+      } catch (error) {
+        console.error('Signup Failed:', error.response.data);
+        setError('Signup failed');
+      }
     };
   
     return (
@@ -24,6 +36,12 @@ function signup() {
               <form onSubmit={handleLogin}>
                 <h1>SIGN UP</h1>
                 <label className='email-label'>Enter details to Sign-up:</label>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
                 <input
                   type="text"
                   placeholder="Email"
