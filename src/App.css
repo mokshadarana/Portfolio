@@ -22,8 +22,7 @@ body {
     background-color: #f0f0f0;
 }
 }
-#root {
-  width:100vw; 
+#root { 
   margin: 0 auto;
   text-align: center;
 }
