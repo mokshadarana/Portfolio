@@ -1,25 +1,13 @@
-/*
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Homepage from './HomePage.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Homepage from './components/home/HomePage.jsx'; // Assuming this is your main component
+import About from './components/about/About.jsx';
+
+
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Homepage />
-  </React.StrictMode>,
-
-*/
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.jsx';
-import './index.css';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <About/>
+    <Homepage/>
   </React.StrictMode>
 );
-
-export default main;

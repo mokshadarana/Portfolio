@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import Login from './components/login/login.jsx';
-
+import Login from './components/neccesity/Navbar';
+im[port Navbar]
 function App() {
   return(
   <div className='container'>
-    <Login/>
+    <Navbar />
   </div>
   )
 }

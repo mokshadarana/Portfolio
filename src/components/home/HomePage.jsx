@@ -1,10 +1,13 @@
 import React from 'react';
 import './HomePage.css'; // Import CSS file for styling
+import Footer from '../neccesity/Footer';
+import Navbar from "../neccesity/Navbar";
 
 
 function Homepage() {
   return (
     <div className="homepage">
+      <Navbar/>
       <header>
         <div className="logo">
           <img src="onebite_logo.png" alt="OneBite Foods Logo" />
@@ -58,6 +61,7 @@ function Homepage() {
       <p>Email: info@onebitefoods </p>
         <p style={{ fontFamily: 'Manrope', fontSize: '18px' }}>&copy; 2024 OneBite Foods. All rights reserved.</p>
       </footer>
+      <Footer/>
     </div>
   );
 }
