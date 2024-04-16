@@ -1,8 +1,16 @@
-import React from 'react';
 import '../styles/table.css';
 import titlepic from '../assets/food4.jpg';
 import tablepic1 from '../assets/table1.jpg';
+import tablepic2 from '../assets/table2.jpg';
+import tablepic3 from '../assets/table3.jpg';
+import tablepic4 from '../assets/table4.jpg';
+import tablepic5 from '../assets/table 5.jpg';
+import tablepic6 from '../assets/table6.jpg';
+import tablepic7 from '../assets/table7.jpg';
+import tablepic8 from '../assets/table8.jpg';
+
 import Card from "../Card";
+
 function Tables() {
   return (
     <div>
@@ -21,6 +29,15 @@ function Tables() {
       layout="default"
         image ={tablepic1}
         title = "Table 1"
+        description = "No. of People • 2"
+        button = "Book a table"
+        booked='• Booked'
+        time1='• 10 AM - 12 PM'
+      />
+      <Card 
+      layout="default"
+        image ={tablepic2}
+        title = "Table 2"
         description = "No. of People • 4"
         button = "Book a table"
         booked='• Booked'
@@ -28,53 +45,44 @@ function Tables() {
       />
       <Card 
       layout="default"
-        image ={tablepic1}
-        title = "Table 1"
-        description = "No. of People • 4"
+        image ={tablepic3}
+        title = "Table 3"
+        description = "No. of People • 1"
         button = "Book a table"
         booked='• Booked'
         time1='• 10 AM - 12 PM'
       />
       <Card 
       layout="default"
-        image ={tablepic1}
-        title = "Table 1"
-        description = "No. of People • 4"
+        image ={tablepic4}
+        title = "Table 4"
+        description = "No. of People • 5"
         button = "Book a table"
         booked='• Booked'
         time1='• 10 AM - 12 PM'
       />
       <Card 
       layout="default"
-        image ={tablepic1}
-        title = "Table 1"
-        description = "No. of People • 4"
+        image ={tablepic5}
+        title = "Table 5"
+        description = "No. of People • 3"
         button = "Book a table"
         booked='• Booked'
         time1='• 10 AM - 12 PM'
       />
       <Card 
       layout="default"
-        image ={tablepic1}
-        title = "Table 1"
-        description = "No. of People • 4"
+        image ={tablepic6}
+        title = "Table 6"
+        description = "No. of People • 6"
         button = "Book a table"
         booked='• Booked'
         time1='• 10 AM - 12 PM'
       />
       <Card 
       layout="default"
-        image ={tablepic1}
-        title = "Table 1"
-        description = "No. of People • 4"
-        button = "Book a table"
-        booked='• Booked'
-        time1='• 10 AM - 12 PM'
-      />
-      <Card 
-      layout="default"
-        image ={tablepic1}
-        title = "Table 1"
+        image ={tablepic7}
+        title = "Table 7"
         description = "No. of People • 4"
         button = "Book a table"
         booked='• Booked'
@@ -84,9 +92,9 @@ function Tables() {
       
       <Card 
       layout="default"
-        image ={tablepic1}
-        title = "Table 1"
-        description = "No. of People • 4"
+        image ={tablepic8}
+        title = "Table 8"
+        description = "No. of People • 2"
         button = "Book a table"
         booked='• Booked'
         time1='• 10 AM - 12 PM'
