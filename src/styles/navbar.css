@@ -132,6 +132,51 @@ header{
 .responsive{
   transform: none;
 }
+.icon {
+  width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+    align-items: center;
+}
+.profile-btn {
+  background: none;
+  border:none;
+  outline:none;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+.profile-btn :hover{
+  transform: scale(1.2);
+  border-radius: 2rem;
+}
+.profile-btn img {
+  width: 65%;
+  height: auto;
+}
+.logout-btn {
+  background: none;
+  border:none;
+  outline:none;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+.logout-btn :hover{
+  transform: scale(1.2);
+  border-radius: none;
+}
+.logout-btn img {
+  width: 65%;
+  height: auto;
+}
 @media(min-width: 768px) and (max-width: 991px) {
 
   .navbar {
