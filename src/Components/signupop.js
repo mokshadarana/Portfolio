@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import "../styles/signuppop.css";
-import pic from "../assets/pexels-pixabay-416471.jpg";
+import PropTypes from 'prop-types';
+import pic from "../assets/signup.jpg";
 function SignupPopup({ onClose }) {
   useEffect(() => {
     // Add event listener to disable scrolling when the popup is opened
@@ -38,5 +39,9 @@ function SignupPopup({ onClose }) {
   </div> 
   );
 }
+
+SignupPopup.propTypes = {
+  onClose: PropTypes.func.isRequired, 
+};
 
 export default SignupPopup;
