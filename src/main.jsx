@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Homepage from './components/home/HomePage.jsx'; // Assuming this is your main component
-import About from './components/about/About.jsx';
+import Homepage from './Components/home/HomePage.js'; // Assuming this is your main component
+import About from './Components/about/About.js';
 
 
 import './index.css';
