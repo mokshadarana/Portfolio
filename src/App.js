@@ -1,5 +1,5 @@
-import React from 'react'; // Import React
-import PropTypes from 'prop-types'; // Import PropTypes for prop validation
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './pages/Home';
@@ -13,8 +13,8 @@ import LoginPopup from './Components/loginpop';
 import SignupPopup from './Components/signupop';
 
 function App() {
-  const [showLoginPopup, setShowLoginPopup] = React.useState(false); // Use React.useState instead of useState
-  const [showSignupPopup, setShowSignupPopup] = React.useState(false); // Use React.useState instead of useState
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
+  const [showSignupPopup, setShowSignupPopup] = useState(false);
 
   const openLoginPopup = () => {
     setShowLoginPopup(true);
@@ -22,6 +22,7 @@ function App() {
 
   const closeLoginPopup = () => {
     setShowLoginPopup(false);
+    setShowSignupPopup(false);
   };
 
   const openSignupPopup = () => {
@@ -31,6 +32,11 @@ function App() {
   const closeSignupPopup = () => {
     setShowSignupPopup(false);
     setShowLoginPopup(false);
+  };
+
+  const handleLogin = () => {
+    console.log("Login successful");
+    // You can perform any actions after successful login
   };
 
   return (
@@ -45,8 +51,8 @@ function App() {
             <Route path="/Location" exact component={Location} />
             <Route path="/Tables" exact component={Tables} />
           </Switch>
-          {showLoginPopup && <LoginPopup onClose={closeLoginPopup} onOpenSignupPopup={openSignupPopup} />}
-          {showSignupPopup && <SignupPopup onClose={closeSignupPopup} />}
+          {showLoginPopup && <LoginPopup onClose={closeLoginPopup} onOpenSignupPopup={openSignupPopup} handleLogin={handleLogin} />}
+          {showSignupPopup && <SignupPopup onClose={closeSignupPopup} onOpenLoginPopup={openLoginPopup} handleLogin={handleLogin} />}
         </div>
         <Footer />
       </Router>
@@ -56,16 +62,16 @@ function App() {
 
 // Prop types validation
 Navbar.propTypes = {
-  onOpenLoginPopup: PropTypes.func.isRequired // Validate onOpenLoginPopup prop
+  onOpenLoginPopup: PropTypes.func.isRequired
 };
 
 LoginPopup.propTypes = {
-  onClose: PropTypes.func.isRequired, // Validate onClose prop
-  onOpenSignupPopup: PropTypes.func.isRequired // Validate onOpenSignupPopup prop
+  onClose: PropTypes.func.isRequired,
+  onOpenSignupPopup: PropTypes.func.isRequired
 };
 
 SignupPopup.propTypes = {
-  onClose: PropTypes.func.isRequired // Validate onClose prop
+  onClose: PropTypes.func.isRequired
 };
 
 export default App;
