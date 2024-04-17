@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import './card.css';
 
 function Card({ layout, title, description, image, buttons,button, booked, time1, time2, time3, Available, price }) {
@@ -14,7 +14,7 @@ function Card({ layout, title, description, image, buttons,button, booked, time1
             <p className="card-description">{description}</p>
           </div>
           <div className='menu-button'>
-            <p className='price'>${price}</p>
+            <p className='price'>Rs{price}</p>
             <button className='button'>{buttons}</button>
           </div>
         </div>
@@ -49,5 +49,21 @@ function Card({ layout, title, description, image, buttons,button, booked, time1
     );
   }
 }
+
+Card.propTypes = {
+  layout: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  buttons: PropTypes.string,
+  button: PropTypes.string,
+  booked: PropTypes.string,
+  time1: PropTypes.string,
+  time2: PropTypes.string,
+  time3: PropTypes.string,
+  Available: PropTypes.string,
+  price: PropTypes.number.isRequired,
+};
+
 
 export default Card;

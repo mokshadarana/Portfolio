@@ -2,9 +2,11 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 
+
 // Create Express app
 const app = express();
 
+app.use(express.json())
 // Enable CORS middleware
 app.use(cors());
 
@@ -13,7 +15,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: '',
-    database: 'nmc'
+    database: 'collaborative'
 });
 
 // Connect to the database
@@ -31,7 +33,7 @@ app.use(express.json());
 // Handle login request
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-    const sql = "SELECT * FROM student WHERE email = ? AND password = ?";
+    const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
     db.query(sql, [email, password], (err, results) => {
         if (err) {
             console.error('Error querying database:', err);

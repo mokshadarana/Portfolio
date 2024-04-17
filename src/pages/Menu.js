@@ -25,7 +25,7 @@ function Menu() {
           image ={menupic1}
           title = "Pâtes alfredo"
           description = "• Butter • Cheese • Shrimp"
-          price="20"
+          price="760"
           buttons = "Takeaway"
           
           />
@@ -34,7 +34,7 @@ function Menu() {
           image ={menupic2}
           title = "Sphaghetti Bolongnese"
           description = "• Sphaghetti • Sauce • Cheese"
-          price="20"
+          price="520"
           buttons = "Takeaway"
           
           />
@@ -42,53 +42,53 @@ function Menu() {
           layout= "menu"
           image ={menupic3}
           title = "Baked Salmon with Lemon Sauce"
-          description = "• Onion • Meat • Bake"
-          price="20"
+          description = "• Salmon • Brocolli • Potato"
+          price="450"
           buttons = "Takeaway"
           
           />
           <Card
           layout= "menu"
           image ={menupic4}
-          title = "Pancake"
-          description = "• Onion • Meat • Bake"
-          price="20"
+          title = "Spicy Chicken Nuggets"
+          description = "• Chicken • Corrainder "
+          price="320"
           buttons = "Takeaway"
           
           />
           <Card
           layout= "menu"
           image ={menupic5}
-          title = "Pancake"
-          description = "• Onion • Meat • Bake"
-          price="20"
+          title = "Butter Chicken"
+          description = "• Chicken • Butter • Naan"
+          price="250"
           buttons = "Takeaway"
           
           />
           <Card
           layout= "menu"
           image ={menupic6}
-          title = "Pancake"
-          description = "• Onion • Meat • Bake"
-          price="20"
+          title = "Fries Platter"
+          description = "• Potato • Cheese • Corrainder"
+          price="380"
           buttons = "Takeaway"
           
           />
           <Card
           layout= "menu"
           image ={menupic7}
-          title = "Pancake"
-          description = "• Onion • Meat • Bake"
-          price="20"
+          title = "Pork Chops & Potatoes Skillet"
+          description = "• Chicken • Potatoes "
+          price="880"
           buttons = "Takeaway"
           
           />
           <Card
           layout= "menu"
           image ={menupic8}
-          title = "Pancake"
-          description = "• Onion • Meat • Bake"
-          price="20"
+          title = "Avocado Salad"
+          description = "• Avocado • Tomato • Olive oil"
+          price="425"
           buttons = "Takeaway"
           
           />

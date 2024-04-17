@@ -1,5 +1,5 @@
-
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/loginpop.css'; // Import CSS file for styling
 import pic from '../assets/pexels-pixabay-416471.jpg';
 
@@ -41,7 +41,7 @@ function LoginPopup({ onClose,onOpenSignupPopup }) {
                 <button className="sign1">Continue With Facebook</button>
               </div>
               <div className="signin-texts">
-                <button className="signtext"  onClick={onOpenSignupPopup}>Don't have an account then, SignUp</button>
+              <button className="signtext" onClick={onOpenSignupPopup}>Don&apos;t have an account then, SignUp</button>
               </div>
         </div>
         <div className='popup-pic'>
@@ -52,5 +52,11 @@ function LoginPopup({ onClose,onOpenSignupPopup }) {
   
   );
 }
+
+LoginPopup.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  onOpenSignupPopup: PropTypes.func.isRequired,
+};
+
 
 export default LoginPopup;

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/story.css';
 function Story() {
   return (

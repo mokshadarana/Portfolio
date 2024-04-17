@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react'; // Import React
+import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './pages/Home';
@@ -8,12 +9,12 @@ import Story from './pages/Story';
 import Location from './pages/Location';
 import Tables from "./pages/Tables";
 import Footer from './Components/Footer';
-import LoginPopup from './Components/loginpop'; // Import the LoginPopup component
-import SignupPopup from './Components/signupop'; // Import the SignupPopup component
+import LoginPopup from './Components/loginpop';
+import SignupPopup from './Components/signupop';
 
 function App() {
-  const [showLoginPopup, setShowLoginPopup] = useState(false);
-  const [showSignupPopup, setShowSignupPopup] = useState(false);
+  const [showLoginPopup, setShowLoginPopup] = React.useState(false); // Use React.useState instead of useState
+  const [showSignupPopup, setShowSignupPopup] = React.useState(false); // Use React.useState instead of useState
 
   const openLoginPopup = () => {
     setShowLoginPopup(true);
@@ -29,8 +30,7 @@ function App() {
 
   const closeSignupPopup = () => {
     setShowSignupPopup(false);
-      // Close the login popup when signup popup is closed
-      setShowLoginPopup(false);
+    setShowLoginPopup(false);
   };
 
   return (
@@ -53,5 +53,19 @@ function App() {
     </div>
   );
 }
+
+// Prop types validation
+Navbar.propTypes = {
+  onOpenLoginPopup: PropTypes.func.isRequired // Validate onOpenLoginPopup prop
+};
+
+LoginPopup.propTypes = {
+  onClose: PropTypes.func.isRequired, // Validate onClose prop
+  onOpenSignupPopup: PropTypes.func.isRequired // Validate onOpenSignupPopup prop
+};
+
+SignupPopup.propTypes = {
+  onClose: PropTypes.func.isRequired // Validate onClose prop
+};
 
 export default App;

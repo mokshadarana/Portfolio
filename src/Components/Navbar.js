@@ -1,4 +1,5 @@
-import React, { useState,useEffect } from 'react'
+import { useState,useEffect } from 'react'
+import PropTypes from 'prop-types';
 import {FaBars, FaTimes } from "react-icons/fa";
 import Logo from '../assets/vector.png';
 import Cart from '../assets/shopping cart.png'
@@ -81,5 +82,10 @@ import '../styles/navbar.css'
     </header>
   );
 }
+
+Navbar.propTypes = {
+  onOpenLoginPopup: PropTypes.func.isRequired,
+};
+
 
 export default Navbar
