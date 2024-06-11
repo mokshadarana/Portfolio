@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import "../styles/Home.css";
 import pic from '../assets/moks.jpg';
 
 const Home = () => {
+    const [isAboutVisible, setIsAboutVisible] = useState(false);
+
+    const handleAboutClick = () => {
+        setIsAboutVisible(!isAboutVisible);
+    };
+
     return (
         <main>
             <div className="full">
@@ -18,14 +25,31 @@ const Home = () => {
 
                 <div className="content">
                     <div className="about">
-                        <p>ABOUT ME</p>
+                        <p onClick={handleAboutClick}>ABOUT ME</p>
+                        <div className={`additional-content ${isAboutVisible ? 'visible-content' : 'hidden-content'}`}>
+                            <p>
+                                I have a strong background in web development with experience in various technologies including HTML, CSS, JavaScript, and React. 
+                                I enjoy solving complex problems and creating intuitive, user-friendly interfaces. 
+                                In my free time, I love exploring new technologies, reading, and hiking.
+                            </p>
+                        </div>
                     </div>
                     <div className="image">
                         <img src={pic} alt='image of Mokshada' />
                     </div>
                 </div>
 
+                <div className="work">
+                    <p>Works</p>
+                </div>
 
+                <div className='education'>
+                    <p>Education</p>
+                </div>
+
+                <div className='hobbies'>
+                    <p>Hobbies</p>
+                </div>
             </div>
         </main>
     );
