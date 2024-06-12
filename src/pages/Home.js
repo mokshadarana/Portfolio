@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import "../styles/Home.css";
-import pic from '../assets/moks.jpg';
+import pic from '../assets/moks-new.jpeg';
+import Navbar from '../Components/navbar';
 
 const Home = () => {
     const [isAboutVisible, setIsAboutVisible] = useState(false);
@@ -12,6 +13,9 @@ const Home = () => {
     return (
         <main>
             <div className="full">
+                <div className='navbar'>
+                    <Navbar/>
+                </div>
                 <div className="header">
                     <span className="text">Mokshada</span>
                     <span className="text">Rana</span>
@@ -25,13 +29,15 @@ const Home = () => {
 
                 <div className="content">
                     <div className="about">
-                        <p onClick={handleAboutClick}>ABOUT ME</p>
-                        <div className={`additional-content ${isAboutVisible ? 'visible-content' : 'hidden-content'}`}>
+                        <p onClick={handleAboutClick} className={isAboutVisible ? 'hidden' : 'visible'}>ABOUT ME</p>
+                        <div className={`additional-content ${isAboutVisible ? 'visible' : 'hidden'}`}>
+                            <h1>About Me</h1>
                             <p>
                                 I have a strong background in web development with experience in various technologies including HTML, CSS, JavaScript, and React. 
                                 I enjoy solving complex problems and creating intuitive, user-friendly interfaces. 
                                 In my free time, I love exploring new technologies, reading, and hiking.
                             </p>
+                            <button onClick={handleAboutClick} style={{ cursor: 'pointer', color: '#f0f0f0', background: '#4150a3', border: 'none', fontSize: '19px', margin: '10px', transform: 'ease' , width: '60px'}}>Back</button>
                         </div>
                     </div>
                     <div className="image">

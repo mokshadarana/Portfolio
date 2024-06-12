@@ -1,0 +1,40 @@
+
+
+.bar {
+    width: 100%;
+    background-color: #464d74;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px (0, 0, 0, 0.1); /* Optional: add a shadow for better separation */
+    height: 60px; /* Adjust the height as needed */
+}
+
+.logo {
+    height: 40px; /* Adjust the logo height as needed */
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between navbar items */
+    align-items: center;
+}
+
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+.navbar-item:hover {
+    background-color: #575757;
+}

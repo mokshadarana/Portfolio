@@ -84,8 +84,8 @@ main {
 .content .about .additional-content p{
   font-size: 20px;
   font-weight: 300;
-  color: #f0f0f0;
-  width: 230px;
+  color: #385679;
+  width: 413px;
 }
 
   .image {
@@ -99,7 +99,7 @@ main {
   .image img{
     max-width: 80%;
     height: auto;
-    border-radius: 900px;
+    border-radius: 100%;
     border-color: #303a6d;
     margin-right: -50px;
   }
@@ -171,29 +171,83 @@ main {
   margin-top: 90px;
 }
 
-/* Add a hidden class for the initial state */
+@keyframes sinkOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes sinkIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .hidden {
   opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  height: 0;
+  overflow: hidden;
+  animation: sinkOut 0.5s forwards;
 }
 
-/* Add a visible class for the final state */
 .visible {
   opacity: 1;
-  transform: translateX(0);
+  height: auto;
+  animation: sinkIn 0.5s forwards;
 }
 
-.about.hidden {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+.about p {
+  cursor: pointer;
+  font-size: 110px;
+  color: #464d74;
+  margin: 70px 10px;
+  transition: ease;
 }
 
-.about.visible {
-  opacity: 1;
-  transform: translateX(0);
+.additional-content {
+  margin: 70px 10px;
 }
 
+.additional-content h1 {
+  color: #464d74;
+  font-size: 38px;
+}
 
+.additional-content p {
+  font-size: 18px;
+  color: #4150a3;
+  width: 413px;
+}
 
+.content .about {
+  position: relative;
+}
+
+.content .about .additional-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:30px;
+}
+
+.navbar img{
+  width: 126px;
+  height: 95px;
+}
