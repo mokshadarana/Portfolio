@@ -1,21 +1,22 @@
 import { useState } from 'react';
 import "../styles/Home.css";
 import pic from '../assets/moks-new.jpeg';
-import Navbar from '../Components/navbar';
 
 const Home = () => {
     const [isAboutVisible, setIsAboutVisible] = useState(false);
+    const [isEducationVisible, setIsEducationVisible] = useState(false);
 
     const handleAboutClick = () => {
         setIsAboutVisible(!isAboutVisible);
     };
 
+    const handleEducationClick = () => {
+        setIsEducationVisible(!isEducationVisible);
+    };
+
     return (
         <main>
             <div className="full">
-                <div className='navbar'>
-                    <Navbar/>
-                </div>
                 <div className="header">
                     <span className="text">Mokshada</span>
                     <span className="text">Rana</span>
@@ -49,8 +50,17 @@ const Home = () => {
                     <p>Works</p>
                 </div>
 
-                <div className='education'>
-                    <p>Education</p>
+                <div className="education">
+                    <p onClick={handleEducationClick} className={isEducationVisible ? 'hidden' : 'visible'}>Education</p>
+                    <div className={`additional-content ${isEducationVisible ? 'visible' : 'hidden'}`}>
+                        <h1>Education</h1>
+                        <ul>
+                            <li>Meridian International School : Secondary Level Education</li>
+                            <li>Xavier Academy : Higher Secondary Education</li>
+                            <li>Herald College Kathmandu : Bachelor&apos;s</li>
+                        </ul>
+                        <button onClick={handleEducationClick} style={{ cursor: 'pointer', color: '#f0f0f0', background: '#4150a3', border: 'none', fontSize: '19px', margin: '10px', transform: 'ease' , width: '60px'}}>Back</button>
+                    </div>
                 </div>
 
                 <div className='hobbies'>
